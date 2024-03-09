@@ -1,0 +1,122 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color:#19c8fa;
+}
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small Screen */
+
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* Medium Screen */
+
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large Screen */
+
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* Start home page  */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 30px);
+    bottom: 0;
+    left: 15px;
+    background-color: #a2a2a2;
+}
+
+header .logo {
+    height: 40px;
+}
+/* Take the free area */
+header nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: 0.5s;
+    padding: 40px 10px;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+header nav .Form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 40px;
+    border-left: 1px solid white;
+}
+header nav .Form i{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
